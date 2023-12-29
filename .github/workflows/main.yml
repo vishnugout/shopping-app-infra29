@@ -56,7 +56,7 @@ jobs:
         run: |
           terraform apply \
             -var "instance_type=${{ github.event.inputs.instance_type }}" \
-            -var "instance_ami=${{ github.event.inputs.instance_ami }}"
+            -var "instance_ami=${{ github.event.inputs.instance_ami }}" \
             -auto-approve 
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.PROD_ACCESS_KEY }}
